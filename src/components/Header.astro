@@ -65,18 +65,25 @@
 </header>
 
 <script>
-  document.getElementById("menu-programa").addEventListener("click", () => {
-    document.getElementById("programa").scrollIntoView({ behavior: "smooth" });
+  const handleScroll = (elementId:string) => {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  document.getElementById("menu-programa")?.addEventListener("click", () => {
+    handleScroll("programa");
   });
-  document.getElementById("menu-epcj").addEventListener("click", () => {
-    document.getElementById("epcj").scrollIntoView({ behavior: "smooth" });
+
+  document.getElementById("menu-epcj")?.addEventListener("click", () => {
+    handleScroll("epcj");
   });
-  document.getElementById("menu-contacto").addEventListener("click", () => {
-    document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+
+  document.getElementById("menu-contacto")?.addEventListener("click", () => {
+    handleScroll("contacto");
   });
-  document.getElementById("boton-inscripcion").addEventListener("click", () => {
-    document
-      .getElementById("inscripcion")
-      .scrollIntoView({ behavior: "smooth" });
-  });
+
+  document
+    .getElementById("boton-inscripcion")
+    ?.addEventListener("click", () => {
+      handleScroll("inscripcion");
+    });
 </script>

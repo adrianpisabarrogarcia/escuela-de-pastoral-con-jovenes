@@ -57,8 +57,8 @@
     <p
       class="text-xl mt-6 text-custom-blue bg-slate-50 pt-1 pb-1 rounded-lg font-medium pe-2 ps-2 leading-relaxed inline-block"
     >
-      Jóvenes construyendo fraternidad, solidaridad y diálogo para un
-      futuro lleno de fe
+      Jóvenes construyendo fraternidad, solidaridad y diálogo para un futuro
+      lleno de fe
     </p>
     <div class="mt-16">
       <button
@@ -99,21 +99,23 @@
   </div>
 </section>
 <script>
-  document.getElementById("button-next").addEventListener("click", () => {
-    document.getElementById("epcj").scrollIntoView({ behavior: "smooth" });
+  const handleScroll = (elementId: string) => {
+    document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  document.getElementById("button-next")?.addEventListener("click", () => {
+    handleScroll("epcj");
   });
+
   document
     .getElementById("button-documento-marco")
-    .addEventListener("click", () => {
-      document
-        .getElementById("documento-marco")
-        .scrollIntoView({ behavior: "smooth" });
+    ?.addEventListener("click", () => {
+      handleScroll("documento-marco");
     });
+
   document
     .getElementById("button-inscripcion")
-    .addEventListener("click", () => {
-      document
-        .getElementById("inscripcion")
-        .scrollIntoView({ behavior: "smooth" });
+    ?.addEventListener("click", () => {
+      handleScroll("inscripcion");
     });
 </script>
