@@ -7,6 +7,7 @@ export default {
 				'custom-red': '#9C3E45',
 				'custom-blue': '#135476',
 				'custom-yellow-chrome': '#ffeb3b',
+				'custom-probar': '#00BFFF',
 			}
 		},
 	},
