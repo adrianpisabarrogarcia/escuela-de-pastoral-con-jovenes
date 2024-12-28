@@ -6,8 +6,10 @@ export default {
 			colors: {
 				'custom-red': '#9C3E45',
 				'custom-blue': '#135476',
-				'custom-yellow-chrome': '#ffeb3b',
-				'custom-probar': '#00BFFF',
+				'custom-yellow': '#E2A84D',
+				'custom-orange': '#b5551e',
+				'custom-green': '#3d6772',
+				'custom-blue-more': '#203B43',
 			}
 		},
 	},

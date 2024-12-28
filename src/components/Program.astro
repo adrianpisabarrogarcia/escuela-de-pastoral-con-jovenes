@@ -1,0 +1,106 @@
+---
+const schedule = [
+  {
+    day: "Sábado 22 de marzo",
+    activities: [
+      {
+        time: "9:00 - 10:00",
+        name: "Acogida y recogida de material",
+        description: "",
+      },
+      {
+        time: "10:00 - 10:45",
+        name: "Bienvenida",
+        description:
+          "El equipo de la EPcJ presentará la propuesta de este año y dará la bienvenida.",
+      },
+      {
+        time: "10:45 - 10:45",
+        name: "Oración inicial",
+        description: "",
+      },
+      {
+        time: "10:45 - 12:00",
+        name: "“Sinodalidad y pastoral con jóvenes”",
+        description:
+          "Será una ponencia dialogada con Cristina Inogés, Zoraida Sánchez y jóvenes de la coordinadora de la EPcJ (Rolando, Jesús y Sabela).",
+      },
+      {
+        time: "12:00 - 12:30",
+        name: "Descanso",
+        description: "",
+      },
+      {
+        time: "12:30 - 14:00",
+        name: "Compartiendo los ecos de la ponencia y nuestra experiencia",
+        description: "",
+      },
+      {
+        time: "14:00 - 16:00",
+        name: "Comida y descanso",
+        description: "La comida será en el colegio La Salle Maravillas.",
+      },
+      {
+        time: "16:00 - 20:00",
+        name: "Buenas prácticas",
+        description:
+          "Presentación y diálogo de diferentes experiencias de sinodalidad, compartiendo vida, fe y misión, o generando espacios de participación de todos y todas. Tendremos un descanso a mitad de la tarde.",
+      },
+      {
+        time: "20:45",
+        name: "Oración",
+        description: "",
+      },
+    ],
+  },
+  {
+    day: "Domingo 9 de octubre",
+    activities: [
+      {
+        time: "10:00 - 11:00",
+        name: "Eucaristía",
+        description: "",
+      },
+      {
+        time: "11:00 - 13:00",
+        name: "Concretando la sinodalidad en la pastoral con jóvenes",
+        description:
+          "El equipo de jóvenes de la EPcJ proponen un itinerario en grupos desde el que reflexionar y dialogar las concreciones de una Pastoral con Jóvenes Sinodal.",
+      },
+      {
+        time: "13:00 - 13:30",
+        name: "Despedida",
+        description: "",
+      },
+    ],
+  },
+];
+---
+
+<section class="pt-20 pb-20 bg-custom-blue-more text-center text-white">
+  <h4 class="text-3xl font-black">
+    Programa del evento <span
+      class="font-thin rounded-full bg-slate-50 text-custom-green p-2 pe-3 ps-3 m-2"
+      >#EPcJ2025</span
+    >
+  </h4>
+
+  <div class="text-start m-10">
+    {
+      schedule.map((day) => (
+        <div>
+          <h5 class="font-semibold text-2xl mt-10">{day.day}</h5>
+          {day.activities.map((activity) => (
+            <div class="flex justify-around items-center mt-4 text-start border-slate-400 border p-4 rounded-xl">
+              <div class="w-1/5 text-center">{activity.time}</div>
+              <div class="w-4/5">
+                <p class="font-bold">{activity.name}</p>
+                <p class="text-sm text-gray-300">{activity.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</section>
