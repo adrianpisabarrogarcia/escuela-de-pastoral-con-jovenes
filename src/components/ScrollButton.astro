@@ -1,0 +1,51 @@
+<!-- Botón de Scroll hasta arriba -->
+<div class="fixed bottom-4 right-4">
+  <button
+    id="scrollToTopButton"
+    class="bg-custom-blue text-white py-2 px-4 rounded-full shadow-lg hover:bg-custom-blue-dark transition transform scale-0"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up h-10"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M12 5l0 14"></path><path d="M18 11l-6 -6"></path><path d="M6 11l6 -6"
+      ></path></svg
+    >
+  </button>
+</div>
+
+<script>
+  const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+  // Escucha el evento de scroll para mostrar/ocultar el botón con animación
+  window.addEventListener("scroll", () => {
+    if (scrollToTopButton) {
+      if (window.scrollY > 200) {
+        // Cambia 200 por la cantidad de scroll deseada
+        scrollToTopButton.classList.remove("scale-0");
+        scrollToTopButton.classList.add("scale-100");
+      } else {
+        scrollToTopButton.classList.remove("scale-100");
+        scrollToTopButton.classList.add("scale-0");
+      }
+    }
+  });
+
+  // Lógica para el scroll suave hacia arriba
+  if (scrollToTopButton) {
+    scrollToTopButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
+</script>

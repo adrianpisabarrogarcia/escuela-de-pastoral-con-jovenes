@@ -12,23 +12,25 @@
   <nav class="flex items-center">
     <ul class="flex">
       <li class="p-2">
-        <a
-          href="#"
-          class="hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2">
-          Programa</a>
-      </li>
-      <li class="p-2">
-        <a
-          href="#"
-          class="hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2"
-          >Sobre EPcJ</a
+        <span
+          id="menu-epcj"
+          class="hover:cursor-pointer hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2"
+          >Sobre EPcJ</span
         >
       </li>
       <li class="p-2">
-        <a
-          href="#"
-          class="hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2"
-          >Contacto</a
+        <span
+          id="menu-programa"
+          class="hover:cursor-pointer hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2"
+        >
+          Programa</span
+        >
+      </li>
+      <li class="p-2">
+        <span
+          id="menu-contacto"
+          class="hover:cursor-pointer hover:opacity-85 uppercase relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 p-2"
+          >Contacto</span
         >
       </li>
     </ul>
@@ -38,6 +40,7 @@
       class="bg-custom-red text-white px-6 py-3 rounded font-bold flex
 	  items-center transition-all duration-200 hover:bg-custom-blue
 	  active:scale-95 hover:scale-110"
+      id="boton-inscripcion"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -60,3 +63,18 @@
     </button>
   </section>
 </header>
+
+<script>
+  document.getElementById("menu-programa").addEventListener("click", () => {
+    document.getElementById("programa").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("menu-epcj").addEventListener("click", () => {
+    document.getElementById("epcj").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("menu-contacto").addEventListener("click", () => {
+    document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("boton-inscripcion").addEventListener("click", () => {
+    document.getElementById("inscripcion").scrollIntoView({ behavior: "smooth" });
+  });
+</script>

@@ -63,22 +63,23 @@
     </p>
     <div class="mt-16">
       <button
+        id="button-inscripcion"
         class="bg-custom-blue border-custom-blue border-2 text-white py-3 px-6 rounded font-semibold
         transition-all duration-200 active:scale-95 hover:scale-110 hover:bg-custom-red"
       >
         ¡Inscríbete ahora!
       </button>
-      <a
-        href="#informacion"
+      <button
+        id="button-documento-marco"
         class="ml-4 py-3 px-6 rounded font-semibold hover:underline transition"
       >
-        Más información
-      </a>
+        Documento marco
+      </button>
     </div>
     <div class="mt-16 flex justify-center intems-center">
-      <a
+      <button
         class="flex items-center hover:text-custom-blue-dark"
-        href="#informacion"
+        id="button-next"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +95,26 @@
           ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
             d="M6 10l6 6l6 -6h-12"></path></svg
         >
-      </a>
+      </button>
     </div>
   </div>
 </section>
+<script>
+  document.getElementById("button-next").addEventListener("click", () => {
+    document.getElementById("epcj").scrollIntoView({ behavior: "smooth" });
+  });
+  document
+    .getElementById("button-documento-marco")
+    .addEventListener("click", () => {
+      document
+        .getElementById("documento-marco")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  document
+    .getElementById("button-inscripcion")
+    .addEventListener("click", () => {
+      document
+        .getElementById("inscripcion")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+</script>
