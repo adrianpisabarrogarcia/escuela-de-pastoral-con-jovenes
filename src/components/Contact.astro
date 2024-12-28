@@ -85,7 +85,7 @@
 
 <script>
   const form = document.querySelector("form");
-  form.addEventListener("submit", (e) => {
+  form?.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     fetch("https://formspree.io/f/mnqeanrw", {
@@ -107,15 +107,15 @@
       });
   });
 
-  function showMessage(isSuccess) {
+  function showMessage(isSuccess: boolean) {
     const messageElement = document.getElementById(
       isSuccess ? "successMessage" : "errorMessage"
     );
-    messageElement.classList.remove("hidden");
-    messageElement.classList.add("visible");
+    messageElement?.classList.remove("hidden");
+    messageElement?.classList.add("visible");
     setTimeout(() => {
-      messageElement.classList.remove("visible");
-      messageElement.classList.add("hidden");
+      messageElement?.classList.remove("visible");
+      messageElement?.classList.add("hidden");
     }, 5000);
   }
 </script>
