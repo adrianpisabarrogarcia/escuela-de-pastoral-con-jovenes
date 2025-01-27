@@ -1,3 +1,7 @@
+---
+import Analytics from "@vercel/analytics/astro";
+---
+
 <!doctype html>
 <html lang="es" class="dark">
   <head>
@@ -45,6 +49,7 @@
     <meta name="twitter:image" content="/social-media.webp" />
   </head>
   <body class="bg-gray-800 text-white">
+    <Analytics />
     <slot />
   </body>
 </html>
